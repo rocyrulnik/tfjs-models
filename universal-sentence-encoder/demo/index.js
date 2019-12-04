@@ -64,7 +64,7 @@ const init = async () => {
           sentenceI.matMul(sentenceJ, sentenceITranspose, sentenceJTransepose)
               .dataSync();
 
-      ctx.fillStyle = interpolateReds(score);
+      ctx.fillStyle = d3.interpolateReds(score);
       ctx.fillRect(j * cellSize, i * cellSize, cellSize, cellSize);
       ctx.fillRect(i * cellSize, j * cellSize, cellSize, cellSize);
     }
